@@ -6,9 +6,9 @@ app = Flask(__name__)
 api = Api(app)
 
 class List_sort(Resource):
-  
+
     def post(self):
-        int_list = json.loads(request.form['data'])
+        int_list = json.loads(request.form['list_of_numbers'])
         int_list.sort()
         return(jsonify({'sorted_list':int_list}))
 
